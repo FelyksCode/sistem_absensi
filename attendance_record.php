@@ -19,7 +19,6 @@ $user_id = $_SESSION['user_id'];
 $query = "SELECT 
                         a.user_id,
                         u.name,
-                        a.created_at,
                         DATE(a.created_at) AS date,
                         MIN(CASE WHEN a.type = 'in'  THEN a.time END) AS time_in,
                         MAX(CASE WHEN a.type = 'out' THEN a.time END) AS time_out,
